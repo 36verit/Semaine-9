@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>Annuaire</title>
+        </head>
+            <body>
+         
+    <input id="prenom" placeholder="Prénom" />
+    <input id="nom" placeholder="Nom" />
+    <input id="numero" placeholder="Numéro" />
+    <button id="ajouter">Ajouter</button>
+    <ul id="liste">
+        <li>Julie</li>
+        <li>David</li>
+        <li>Chloé</li>
+    </ul>     
+    <script>
+        var myArray = ["Julie", "David", "Chloé"];
+        alert(myArray);  // affiche «Julie, David, Chloé»
+        
+        // Supprimer le dernier élément
+        alert(myArray.pop()); 
+        
+    var $liste = document.getElementById("liste");
+    var $prenom = document.getElementById("prenom");
+    var $nom = document.getElementById("nom");
+    var $numero = document.getElementById("numero");
+    var $ajouter = document.getElementById("ajouter");  
+    
+    var contacts = [{
+     prenom: "David",
+     nom: "Parisot",
+     numero: "0158456789"},
+ 
+    {prenom: "Sab",
+    nom: "Rina",
+    numero: "0112456789"
+}];
+
+function texteContact(contact) {
+    return contact.prenom + " " + contact.nom + " (" + contact.numero + ")";
+}
+
+function afficherListe() {
+    var elements = "";
+    for (i = 0; i < contacts.length; i++) {
+        elements += "<li>" + texteContact(contacts[i]) + "</li>";
+    }
+    $liste.innerHTML = elements;
+}
+
+function ajouter() {
+    contacts.push({
+        prenom: $prenom.value,
+        nom: $nom.value,
+        numero: $numero.value
+    });
+    afficherListe();
+    }
+
+    $ajouter.onclick = ajouter;
+    afficherListe();
+        
+    </script>
+                
+            </body>
+    </html>
+    
