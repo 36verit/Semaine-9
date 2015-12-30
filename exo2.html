@@ -1,0 +1,64 @@
+<!doctype html>
+    <html>
+         <head>
+         <meta charset="utf-8"/>   
+         <title>exo2/tableaux js</title>
+         
+         
+    <div id="container"> 
+  
+    <input id="texte" placeholder="Prénom">
+    <button id="ajouter">Ajouter</button>
+    <button id="annuler">Annuler</button>
+    <button id="supprimer">Supprimer</button>
+    
+    <ul id="liste"></ul>
+
+    </div>
+    
+    </head>  
+    
+    <body>
+        
+  
+
+       
+    <script>
+
+  var  $liste = document.getElementById("liste");
+  var $texte = document.getElementById("texte");
+  var $ajouter = document.getElementById("ajouter");
+  var $supprimer=document.getElementById("supprimer");
+  
+  var myArray = ["Bob", "Julien", "Roger"];
+
+function afficherListe() {
+  var elements = "";
+    for (i = 0; i < myArray.length; i++) {
+       elements += "<li>" + myArray[i] + "</li>";
+    }
+    $liste.innerHTML = elements;
+}
+
+function ajouter() {
+    myArray.push($texte.value);
+    afficherListe();
+}
+
+
+function supprimer(){
+    myArray.pop($texte.value);
+    afficherListe();
+}
+
+$ajouter.onclick = ajouter;
+afficherListe(); 
+
+$supprimer.onclick = supprimer;
+afficherListe();
+     
+    </script>       
+        
+    </body>
+        
+    </html>
