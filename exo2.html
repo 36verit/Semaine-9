@@ -2,35 +2,33 @@
     <html>
          <head>
          <meta charset="utf-8"/>   
+         <link rel stylesheet href="style.css"/>
          <title>exo2/tableaux js</title>
          
          
-    <div id="container"> 
-  
-    <input id="texte" placeholder="Prénom">
-    <button id="ajouter">Ajouter</button>
-    <button id="annuler">Annuler</button>
-    <button id="supprimer">Supprimer</button>
+        <div id="container"> 
+ 
+    <input id="texte" placeholder="texte">
+    <button id="ajouter">ADD</button>
+    <button id="supprimer">CANCEL</button>
     
-    <ul id="liste"></ul>
+        <ul id="liste">
+        </ul>
 
-    </div>
+        </div>
     
-    </head>  
+        </head>  
     
     <body>
-        
-  
-
-       
+    
     <script>
 
-  var  $liste = document.getElementById("liste");
+  var $liste = document.getElementById("liste");
   var $texte = document.getElementById("texte");
   var $ajouter = document.getElementById("ajouter");
   var $supprimer=document.getElementById("supprimer");
   
-  var myArray = ["Bob", "Julien", "Roger"];
+  var myArray = ["Zoé Lancel", "Sabrina D", "David Jemes"];
 
 function afficherListe() {
   var elements = "";
