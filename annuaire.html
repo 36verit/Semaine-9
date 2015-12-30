@@ -10,6 +10,7 @@
     <input id="nom" placeholder="Nom" />
     <input id="numero" placeholder="Numéro" />
     <button id="ajouter">Ajouter</button>
+    
     <ul id="liste">
         <li>Julie</li>
         <li>David</li>
@@ -37,11 +38,9 @@
     nom: "Rina",
     numero: "0112456789"
 }];
-
 function texteContact(contact) {
     return contact.prenom + " " + contact.nom + " (" + contact.numero + ")";
 }
-
 function afficherListe() {
     var elements = "";
     for (i = 0; i < contacts.length; i++) {
@@ -49,7 +48,6 @@ function afficherListe() {
     }
     $liste.innerHTML = elements;
 }
-
 function ajouter() {
     contacts.push({
         prenom: $prenom.value,
@@ -58,7 +56,6 @@ function ajouter() {
     });
     afficherListe();
     }
-
     $ajouter.onclick = ajouter;
     afficherListe();
         
@@ -67,3 +64,4 @@ function ajouter() {
             </body>
     </html>
     
+
